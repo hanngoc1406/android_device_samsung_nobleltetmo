@@ -29,11 +29,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from nobleltetmo device
 $(call inherit-product, device/samsung/nobleltetmo/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelExperience stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+# GAPPS
+TARGET_GAPPS_ARCH := arm64
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := lineage_nobleltetmo
+PRODUCT_NAME := aosp_nobleltetmo
 PRODUCT_DEVICE := nobleltetmo
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
